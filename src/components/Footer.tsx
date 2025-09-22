@@ -22,14 +22,17 @@ export function Footer() {
         
         {/* Left: Logo */}
         <div className="text-center md:text-left">
-          <Link href="/" className="inline-flex items-center justify-center md:justify-start gap-2">
+          <Link href="/" className="inline-flex items-center justify-center md:justify-start gap-3">
             <Image
-              src="/company_logo.png" 
+              src="/company_logo.jpeg" 
               alt="Innovations & Services LLC"
               width={100}
               height={100}
               className="h-16 w-16 sm:h-20 sm:w-20"
             />
+            <span className="text-lg sm:text-xl lg:text-xl font-bold text-gray-900 dark:text-white">
+              Innovations & Services LLC
+            </span>
           </Link>
           <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
             Where your ambitions meet our actions.
@@ -46,7 +49,7 @@ export function Footer() {
               <a 
                 href="/#hero" 
                 onClick={(e) => handleSmoothScroll(e, 'hero')}
-                className="hover:text-indigo-600 transition-colors duration-300 ease-in-out inline-block py-1"
+                className="hover:text-primary-600 transition-colors duration-300 ease-in-out inline-block py-1"
               >
                 Home
               </a>
@@ -55,7 +58,7 @@ export function Footer() {
               <a 
                 href="/#services" 
                 onClick={(e) => handleSmoothScroll(e, 'services')}
-                className="hover:text-indigo-600 transition-colors duration-300 ease-in-out inline-block py-1"
+                className="hover:text-primary-600 transition-colors duration-300 ease-in-out inline-block py-1"
               >
                 Services
               </a>
@@ -64,7 +67,7 @@ export function Footer() {
               <a 
                 href="/#about" 
                 onClick={(e) => handleSmoothScroll(e, 'about')}
-                className="hover:text-indigo-600 transition-colors duration-300 ease-in-out inline-block py-1"
+                className="hover:text-primary-600 transition-colors duration-300 ease-in-out inline-block py-1"
               >
                 About Us
               </a>
@@ -73,7 +76,7 @@ export function Footer() {
               <a 
                 href="/#contact" 
                 onClick={(e) => handleSmoothScroll(e, 'contact')}
-                className="hover:text-indigo-600 transition-colors duration-300 ease-in-out inline-block py-1"
+                className="hover:text-primary-600 transition-colors duration-300 ease-in-out inline-block py-1"
               >
                 Contact
               </a>
@@ -88,9 +91,9 @@ export function Footer() {
           </h3>
           <ul className="space-y-2 text-xs sm:text-sm text-gray-600 dark:text-gray-400">
             <li className="py-1">📍 PO Box 5, Oakdale, PA 15071</li>
-            <li className="py-1">📞 <a href="tel:4122123157" className="hover:text-indigo-600 transition-colors duration-300 ease-in-out">412.212.3157</a></li>
-            <li className="py-1">✉️ <a href="mailto:support@iands-llc.com" className="hover:text-indigo-600 transition-colors duration-300 ease-in-out break-all">support@iands-llc.com</a></li>
-            <li className="py-1">🌐 <a href="https://www.iands-llc.com" target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors duration-300 ease-in-out">www.iands-llc.com</a></li>
+            <li className="py-1">📞 <a href="tel:4122123157" className="hover:text-primary-600 transition-colors duration-300 ease-in-out">412.212.3157</a></li>
+            <li className="py-1">✉️ <a href="mailto:support@iands-llc.com" className="hover:text-primary-600 transition-colors duration-300 ease-in-out break-all">support@iands-llc.com</a></li>
+            <li className="py-1">🌐 <a href="https://www.iands-llc.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary-600 transition-colors duration-300 ease-in-out">www.iands-llc.com</a></li>
           </ul>
         </div>
       </div>

@@ -12,6 +12,13 @@ import { Faq } from "@/components/Faq";
 import { Cta } from "@/components/Cta";
 import { useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
+import { 
+  MegaphoneIcon, 
+  CpuChipIcon, 
+  ClipboardDocumentListIcon, 
+  BuildingOffice2Icon, 
+  UserGroupIcon 
+} from "@heroicons/react/24/solid";
 
 import {servicesInfo } from "@/components/data";
 export default function Home() {
@@ -19,6 +26,24 @@ export default function Home() {
   const serviceEntries = Object.entries(servicesInfo);
   const visibleServices = showAllServices ? serviceEntries : serviceEntries.slice(0, 4);
   const hasMoreServices = serviceEntries.length > 4;
+
+  // Function to get the appropriate icon for each service category
+  const getServiceIcon = (category: string) => {
+    switch (category) {
+      case "Sales & Marketing Solutions":
+        return MegaphoneIcon;
+      case "Emerging Technologies":
+        return CpuChipIcon;
+      case "Project Management":
+        return ClipboardDocumentListIcon;
+      case "Construction Management":
+        return BuildingOffice2Icon;
+      case "Staffing Services":
+        return UserGroupIcon;
+      default:
+        return ClipboardDocumentListIcon;
+    }
+  };
 
   // Function to get certification images
   const getCertificationImages = () => {
@@ -51,28 +76,37 @@ export default function Home() {
       <Hero />
       <div className="text-center mt-8 sm:mt-12 px-4 sm:px-6">
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 dark:text-white">
-          Our Services
+          Detailed Services
         </h2>
+        <p className="text-base sm:text-lg lg:text-xl text-gray-500 text-center dark:text-gray-400 mb-8">
+          Comprehensive solutions across multiple domains
+        </p>
       </div>
 
       {/* Services Info Cards */}
       <Container className="px-4 sm:px-6">
         <div className="grid gap-4 sm:gap-6 mt-8 sm:mt-10 grid-cols-1 lg:grid-cols-2">
-          {visibleServices.map(([category, services], index) => (
-            <div key={index} className="p-4 sm:p-6 lg:p-8 bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-indigo-200/50 dark:hover:shadow-indigo-800/50 hover:border-indigo-300 dark:hover:border-indigo-600">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-                {category}
-              </h3>
+          {visibleServices.map(([category, services], index) => {
+            const IconComponent = getServiceIcon(category);
+            return (
+            <div key={index} className="p-4 sm:p-6 lg:p-8 bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:shadow-primary-200/50 dark:hover:shadow-primary-800/50 hover:border-primary-300 dark:hover:border-primary-600">
+              <div className="flex items-center gap-3 mb-4 sm:mb-6">
+                <IconComponent className="w-8 h-8 sm:w-10 sm:h-10 text-primary-600 dark:text-primary-400 flex-shrink-0" />
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">
+                  {category}
+                </h3>
+              </div>
               <ul className="space-y-2 sm:space-y-3">
                 {services.map((service, serviceIndex) => (
                   <li key={serviceIndex} className="flex items-start">
-                    <div className="flex-shrink-0 w-2 h-2 bg-indigo-600 rounded-full mt-2 mr-3"></div>
+                    <div className="flex-shrink-0 w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3"></div>
                     <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">{service}</span>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
+            );
+          })}
         </div>
         
         {/* Show More/Less Button */}
@@ -80,7 +114,7 @@ export default function Home() {
           <div className="flex justify-center mt-6 sm:mt-8 px-4">
             <button
               onClick={() => setShowAllServices(!showAllServices)}
-              className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
+              className="flex items-center gap-2 px-4 sm:px-6 py-2 sm:py-3 text-sm sm:text-base bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-all duration-300 ease-in-out hover:scale-105 shadow-lg w-full sm:w-auto justify-center"
             >
               {showAllServices ? (
                 <>
@@ -98,23 +132,30 @@ export default function Home() {
         )}
       </Container>
 
-      <SectionTitle
-        preTitle="Projects"
-        title="Our Work Portfolio"
-      >
-        Coming soon
-      </SectionTitle>
+      {/* Mission Section */}
+      
 
-      <Video videoId="fZ0D0cnR88E" />
-
+      {/* Work Portfolio Banner Section */}
+      <section className="relative bg-gradient-to-r from-primary-500 via-blue-50 to-sky-50 dark:from-gray-800 dark:via-gray-700 dark:to-blue-900 py-12 sm:py-16">
+        <Container className="px-2 sm:px-4 lg:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <SectionTitle
+              title="Our Work Portfolio"
+            >
+              <span>Coming Soon</span>
+            </SectionTitle>
+          </div>
+        </Container>
+      </section>
+{/* 
       <SectionTitle
         title="Certifications"
       >
         Our professional certifications and credentials
-      </SectionTitle>
+      </SectionTitle> */}
 
       {/* Certifications Grid */}
-      <Container className="px-4 sm:px-6">
+      {/* <Container className="px-4 sm:px-6">
         <div className="grid gap-4 sm:gap-6 mt-8 sm:mt-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {getCertificationImages().map((cert, index) => (
             <div key={index} className="p-4 sm:p-6 bg-white rounded-lg shadow-lg dark:bg-gray-800 border border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl">
@@ -130,7 +171,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </Container>
+      </Container> */}
         <AboutSection/>
       <ContactSection/>
 

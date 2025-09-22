@@ -65,19 +65,19 @@ export function ContactSection() {
               <h4 className="font-medium text-gray-900 dark:text-white mb-1 text-sm sm:text-base">Phone</h4>
               <a 
                 href="tel:+14122123157" 
-                className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 text-xs sm:text-sm"
+                className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 text-xs sm:text-sm"
               >
-                +1412.212.3157
+                +1 (412) 212-3157
               </a>
             </div>
 
             {/* Email Box */}
-            <div className="p-3 sm:p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 text-center">
+            <div className="p-4 sm:p-5 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 text-center">
               <div className="text-xl sm:text-2xl mb-1 sm:mb-2">✉️</div>
               <h4 className="font-medium text-gray-900 dark:text-white mb-1 text-sm sm:text-base">Email</h4>
               <a
                 href="mailto:support@iands-llc.com"
-                className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 break-all text-xs sm:text-sm"
+                className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 break-words text-xs sm:text-sm"
               >
                 support@iands-llc.com
               </a>
@@ -91,7 +91,7 @@ export function ContactSection() {
                 href="https://www.iands-llc.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300 text-xs sm:text-sm"
+                className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 text-xs sm:text-sm"
               >
                 www.iands-llc.com
               </a>
@@ -101,7 +101,7 @@ export function ContactSection() {
 
         {/* RIGHT: Contact Form */}
         <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 sm:p-6 lg:p-8 shadow-md ring-1 ring-gray-200 dark:ring-gray-700 order-1 lg:order-2">
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-4 sm:mb-6 text-center lg:text-left">Send us a message</h3>
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-4 sm:mb-6 text-center lg:text-left">Get in Touch</h3>
           <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
             {/* Name */}
             <div>
@@ -114,7 +114,7 @@ export function ContactSection() {
                 required
                 value={formData.name}
                 onChange={handleChange}
-                className="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-3 py-2 sm:py-3 text-gray-900 dark:text-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm sm:text-base"
+                className="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-3 py-2 sm:py-3 text-gray-900 dark:text-gray-100 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-sm sm:text-base"
               />
             </div>
 
@@ -129,7 +129,7 @@ export function ContactSection() {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-3 py-2 sm:py-3 text-gray-900 dark:text-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm sm:text-base"
+                className="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-3 py-2 sm:py-3 text-gray-900 dark:text-gray-100 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-sm sm:text-base"
               />
             </div>
 
@@ -143,7 +143,7 @@ export function ContactSection() {
                 name="company"
                 value={formData.company}
                 onChange={handleChange}
-                className="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-3 py-2 sm:py-3 text-gray-900 dark:text-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm sm:text-base"
+                className="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-3 py-2 sm:py-3 text-gray-900 dark:text-gray-100 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-sm sm:text-base"
               />
             </div>
 
@@ -158,14 +158,14 @@ export function ContactSection() {
                 required
                 value={formData.message}
                 onChange={handleChange}
-                className="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-3 py-2 sm:py-3 text-gray-900 dark:text-gray-100 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 text-sm sm:text-base resize-none"
+                className="block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-3 py-2 sm:py-3 text-gray-900 dark:text-gray-100 shadow-sm focus:border-primary-500 focus:ring-primary-500 text-sm sm:text-base resize-none"
               />
             </div>
 
             {/* Submit */}
             <button
               type="submit"
-              className="w-full rounded-md bg-indigo-600 px-4 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors duration-300"
+              className="w-full rounded-md bg-primary-600 px-4 py-2 sm:py-3 text-sm sm:text-base font-semibold text-white shadow hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-colors duration-300"
             >
               Send Message
             </button>
