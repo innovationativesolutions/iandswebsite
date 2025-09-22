@@ -30,7 +30,7 @@ export function AboutSection() {
 
         {/* Leadership */}
         <div className="grid gap-6 sm:gap-8 lg:gap-10 lg:grid-cols-12 items-start">
-          <div className="lg:col-span-5 order-2 lg:order-1">
+          <div className="lg:col-span-4 order-2 lg:order-1">
             <Image
               src="/CEO.jpeg"
               alt="Megha Dâvè"
@@ -43,59 +43,16 @@ export function AboutSection() {
           <div className="lg:col-span-7 order-1 lg:order-2">
             {/* Mission Section */}
             <div className="mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Mission
-              </h2>
-              <div className="space-y-4 text-left">
-                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Our mission is to design and deliver innovative software solutions that empower businesses to thrive.
-                </p>
-                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Our company is committed to building products that are accessible, reliable, and designed to target client&apos;s custom KPIs that helps identify improvement enablers. Our solution centric agile team listens to your problem statement deeply to create precise and intuitive, human-centered applications that help solve complex roadblocks and accelerate progress.
-                </p>
-                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  As a women-owned company, we are dedicated to fostering diversity and inclusion, proving that diverse teams drive superior technology and progress, pushing the industry toward a more inclusive future.
-                </p>
-                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  We are built on honesty and empathy and firmly believe that honoring commitments and admitting mistakes are essential for maintaining credibility and respect.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Values Grid and Leadership - Below the image and mission */}
-        <div className="mt-8 sm:mt-12">
-          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 mb-8 sm:mb-12 lg:mb-16">
-  {values.map((v, i) => (
-    <div
-      key={i}
-      className="group relative p-4 sm:p-6 transition-all duration-300 hover:bg-gray-50 dark:hover:bg-gray-800/50"
-    >
-      <div className="flex items-start sm:items-center gap-3 mb-2 sm:mb-3">
-        <v.icon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5 sm:mt-0 transition-colors duration-300" />
-        <h3 className="text-sm sm:text-base font-semibold text-gray-900 dark:text-white leading-tight">
-          {v.title}
-        </h3>
-      </div>
-      {/* Hover line effect */}
-      <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-primary-600 to-primary-400 transition-all duration-300 group-hover:w-full"></div>
-    </div>
-  ))}
-</div>
-          <h4 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">
-            Leadership
-          </h4>
-          <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
             Founded by <span className="font-medium">Megha Dâvè</span>, who
             brings innovation, resilience, and transparency to deliver
             sustainable solutions and build long-term partnerships.
-          </p>
-        </div>
+             </p>
 
-        {/* Extended About Us description */}
-        <div className="mt-12 sm:mt-16">
-          <div className="prose prose-gray dark:prose-invert max-w-none text-sm sm:text-base leading-relaxed space-y-4">
+             <div className="mt-4"> 
+              </div>
+              <div className="space-y-4 text-justify">
+                <div className="prose prose-gray dark:prose-invert max-w-none text-sm sm:text-base leading-relaxed space-y-4">
             <p>
               As a first-time woman entrepreneur, <span className="font-medium">Megha Dâvè</span> brings innovation, resilience, 
               and a fresh perspective to address businesses’ daily challenges and operational roadblocks with 
@@ -124,7 +81,47 @@ export function AboutSection() {
               by building transparent relationships, and not just business transactions.
             </p>
           </div>
+                
+              </div>
+            </div>
+          </div>
         </div>
+        
+        {/* Values Grid and Leadership - Below the image and mission */}
+             
+
+        {/* Extended About Us description */}
+        <div className="mt-4 sm:mt-6">
+          <div className="prose prose-gray dark:prose-invert max-w-none text-sm sm:text-base leading-relaxed space-y-4 text-center">
+                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <span className="font-bold">Our mission is to design and deliver innovative software solutions that empower businesses to thrive.</span>
+                </p>
+                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  Our company is committed to building products that are accessible, reliable, and designed to target client&apos;s custom KPIs that helps identify improvement enablers. Our solution centric agile team listens to your problem statement deeply to create precise and intuitive, human-centered applications that help solve complex roadblocks and accelerate progress.
+                </p>
+                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  As a women-owned company, we are dedicated to fostering diversity and inclusion, proving that diverse teams drive superior technology and progress, pushing the industry toward a more inclusive future.
+                </p>
+                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  We are built on honesty and empathy and firmly believe that honoring commitments and admitting mistakes are essential for maintaining credibility and respect.
+                </p>
+          </div>
+        </div>
+         <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 mb-8 sm:mb-12 lg:mb-16 mt-12 sm:mt-16">
+            {values.map((v, i) => (
+              <div
+                key={i}
+                className="group rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+              >
+                <div className="flex items-start sm:items-center gap-3 mb-2 sm:mb-3">
+                  <v.icon className="h-7 w-7 sm:h-8 sm:w-8 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5 sm:mt-0" />
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 dark:text-white leading-tight">
+                    {v.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
       </div>
     </section>
   );
