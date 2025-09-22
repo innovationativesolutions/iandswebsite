@@ -25,103 +25,112 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="w-full">
-        <nav className="container relative flex flex-wrap items-center justify-between p-8 mx-auto lg:justify-between xl:px-1">
+    <div className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+        <nav className="container relative flex flex-wrap items-center justify-between py-3 px-4 sm:px-6 lg:px-8 mx-auto lg:justify-between">
         {/* Logo  */}
-        <div>
-          <Link href="/" className="flex items-center gap-2">
+        <div className="flex-shrink-0">
+          <Link 
+            href="#hero" 
+            onClick={(e) => handleSmoothScroll(e, '#hero')}
+            className="transition-opacity duration-300 ease-in-out hover:opacity-80"
+          >
             <Image
               src="/company_logo.png" 
-              alt="Innovations & Services LLC"
-              width={150}
-              height={150}
-              className="h-25 w-25"
+              alt="Innovations & Services LLC Logo"
+              width={80}
+              height={80}
+              className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
             />
           </Link>
-          
         </div>
 
-        {/* get started  */}
-        <div className="gap-3 nav__item mr-2 lg:flex ml-auto lg:ml-0 lg:order-2">
-            <ThemeChanger />
-            <div className="hidden mr-3 lg:flex nav__item">
-              <Link 
-                href="#contact" 
-                onClick={(e) => handleSmoothScroll(e, '#contact')}
-                className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5 hover:bg-indigo-700 transition-colors duration-300 ease-in-out"
-              >
-                Get Started
-              </Link>
-            </div>
-        </div>
-                
         <Disclosure>
           {({ open }) => (
             <>
-                <Disclosure.Button
-                  aria-label="Toggle Menu"
-                  className="px-2 py-1 text-gray-500 rounded-md lg:hidden hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:text-gray-300 dark:focus:bg-trueGray-700">
-                  <svg
-                    className="w-6 h-6 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24">
-                    {open && (
-                      <path
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                      />
-                    )}
-                    {!open && (
-                      <path
-                        fillRule="evenodd"
-                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
-                      />
-                    )}
-                  </svg>
-                </Disclosure.Button>
+              {/* Mobile menu and Get Started button */}
+              <div className="flex items-center gap-2 lg:hidden">
+                  <ThemeChanger />
+                  <Disclosure.Button
+                    aria-label="Toggle Menu"
+                    className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-indigo-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 dark:text-gray-300 dark:hover:text-indigo-400 dark:hover:bg-gray-800">
+                    <svg
+                      className="w-6 h-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true">
+                      {open && (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      )}
+                      {!open && (
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M4 6h16M4 12h16M4 18h16"
+                        />
+                      )}
+                    </svg>
+                  </Disclosure.Button>
+              </div>
 
-                <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
-                  <>
-                    {navigation.map((item, index) => (
+              {/* Desktop menu */}
+              <div className="hidden lg:flex lg:items-center lg:space-x-6">
+                  <ThemeChanger />
+                  <div className="flex items-center space-x-1">
+                    {navigation.map((menu, index) => (
                       <Link 
-                        key={index} 
-                        href={item.href} 
-                        onClick={(e) => handleSmoothScroll(e, item.href)}
-                        className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none transition-colors duration-300 ease-in-out"
+                        key={index}
+                        href={menu.href} 
+                        onClick={(e) => handleSmoothScroll(e, menu.href)}
+                        className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-indigo-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-indigo-400 dark:hover:bg-gray-800 transition-colors duration-300 ease-in-out"
                       >
-                          {item.name}
+                        {menu.name}
                       </Link>
                     ))}
+                  </div>
+                  <Link 
+                    href="#contact" 
+                    onClick={(e) => handleSmoothScroll(e, '#contact')}
+                    className="ml-4 px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors duration-300 ease-in-out"
+                  >
+                    Get Started
+                  </Link>
+              </div>
+
+              <Disclosure.Panel className="lg:hidden">
+                <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+                  {navigation.map((item, index) => (
+                    <Link 
+                      key={index} 
+                      href={item.href} 
+                      onClick={(e) => handleSmoothScroll(e, item.href)}
+                      className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:text-indigo-400 dark:hover:bg-gray-800 transition-colors duration-300 ease-in-out"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                  <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                     <Link 
                       href="#contact" 
                       onClick={(e) => handleSmoothScroll(e, '#contact')}
-                      className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5 hover:bg-indigo-700 transition-colors duration-300 ease-in-out"
+                      className="block w-full px-3 py-2 text-center text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition-colors duration-300 ease-in-out"
                     >         
-                        Get Started
+                      Get Started
                     </Link>
-                  </>
-                </Disclosure.Panel>
+                  </div>
+                </div>
+              </Disclosure.Panel>
             </>
           )}
         </Disclosure>
-        
-        {/* menu  */}
-        <div className="hidden text-center lg:flex lg:items-center">
-          <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
-            {navigation.map((menu, index) => (
-              <li className="mr-3 nav__item" key={index}>
-                <Link 
-                  href={menu.href} 
-                  onClick={(e) => handleSmoothScroll(e, menu.href)}
-                  className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800 transition-colors duration-300 ease-in-out"
-                >
-                    {menu.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+
 
       </nav>
     </div>
