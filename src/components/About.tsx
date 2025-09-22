@@ -16,7 +16,7 @@ const values = [
 export function AboutSection() {
   return (
     <section id="about" className="relative py-12 sm:py-16 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -43,7 +43,7 @@ export function AboutSection() {
           <div className="lg:col-span-7 order-1 lg:order-2">
             {/* Mission Section */}
             <div className="mb-8 sm:mb-12">
-              <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p className="prose prose-gray dark:prose-invert max-w-none text-sm sm:text-base leading-relaxed space-y-4">
             Founded by <span className="font-medium">Megha Dâvè</span>, who
             brings innovation, resilience, and transparency to deliver
             sustainable solutions and build long-term partnerships.
@@ -91,10 +91,10 @@ export function AboutSection() {
              
 
         {/* Extended About Us description */}
-        <div className="mt-4 sm:mt-6">
+        <div className="relative bg-gradient-to-br from-cyan-400 via-white to-sky-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900 sm:py-16 mt-4 sm:mt-6">
           <div className="prose prose-gray dark:prose-invert max-w-none text-sm sm:text-base leading-relaxed space-y-4 text-center">
-                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  <span className="font-bold">Our mission is to design and deliver innovative software solutions that empower businesses to thrive.</span>
+                <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 dark:text-gray-300 leading-relaxed mb-10">
+                  <span className="font-bold">Our mission is to design </span> and deliver innovative software solutions that empower businesses to thrive.
                 </p>
                 <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   Our company is committed to building products that are accessible, reliable, and designed to target client&apos;s custom KPIs that helps identify improvement enablers. Our solution centric agile team listens to your problem statement deeply to create precise and intuitive, human-centered applications that help solve complex roadblocks and accelerate progress.

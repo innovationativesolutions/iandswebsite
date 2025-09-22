@@ -136,7 +136,7 @@ export default function Home() {
       
 
       {/* Work Portfolio Banner Section */}
-      <section className="relative bg-gradient-to-r from-primary-500 via-blue-50 to-sky-50 dark:from-gray-800 dark:via-gray-700 dark:to-blue-900 py-12 sm:py-16">
+      <section className="relative bg-gradient-to-br from-cyan-400 via-white to-sky-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
         <Container className="px-2 sm:px-4 lg:px-6">
           <div className="max-w-3xl mx-auto text-center">
             <SectionTitle

@@ -91,7 +91,7 @@ const servicesInfo = {
     "Estimation & Bidding – Sage, WinEst, Trimble",
     "Scheduling & Planning – P6, Synchro 4D",
     "Resourcing & Tracking – Procore, Viewpoint, Oracle Unifier",
-    "Field-to-Office Integration – Procore, BIM 360, PlanGrid, Inncircles Arena",
+    "Field-to-Office Integration – Procore, BIM 360, PlanGrid",
     "Construction Analytics – Cost, schedule, productivity metrics",
     "Safety & Compliance – OSHA/EHS workflows",
     "Turnover & Handover – Digital commissioning & closeout packages"
