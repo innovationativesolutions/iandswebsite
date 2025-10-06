@@ -25,8 +25,8 @@ export const Navbar = () => {
   };
 
   return (
-    <div className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
-        <nav className="container relative flex flex-wrap items-center justify-between py-3 px-4 sm:px-6 lg:px-8 mx-auto lg:justify-between">
+  <div className="w-full fixed top-0 left-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+    <nav className="container relative flex flex-nowrap items-center justify-between py-3 px-4 sm:px-6 lg:px-8 mx-auto lg:justify-between">
         {/* Logo  */}
         <div className="flex-shrink-0">
           <Link 
@@ -41,7 +41,7 @@ export const Navbar = () => {
               height={80}
               className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24"
             />
-            <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">
+            <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white hidden sm:inline-block">
               Innovations & Services LLC
             </span>
           </Link>
