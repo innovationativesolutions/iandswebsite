@@ -17,7 +17,8 @@ import {
   CpuChipIcon, 
   ClipboardDocumentListIcon, 
   BuildingOffice2Icon, 
-  UserGroupIcon 
+  UserGroupIcon,
+  AdjustmentsHorizontalIcon
 } from "@heroicons/react/24/solid";
 
 import {servicesInfo } from "@/components/data";
@@ -36,6 +37,8 @@ export default function Home() {
         return CpuChipIcon;
       case "Project Management":
         return ClipboardDocumentListIcon;
+      case "Engineering Services":
+        return AdjustmentsHorizontalIcon;
       case "Construction Management":
         return BuildingOffice2Icon;
       case "Staffing Services":
@@ -135,18 +138,7 @@ export default function Home() {
       {/* Mission Section */}
       
 
-      {/* Work Portfolio Banner Section */}
-      <section className="relative bg-gradient-to-br from-cyan-400 via-white to-sky-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
-        <Container className="px-2 sm:px-4 lg:px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <SectionTitle
-              title="Our Work Portfolio"
-            >
-              <span>Coming Soon</span>
-            </SectionTitle>
-          </div>
-        </Container>
-      </section>
+      
 {/* 
       <SectionTitle
         title="Certifications"
@@ -173,6 +165,18 @@ export default function Home() {
         </div>
       </Container> */}
         <AboutSection/>
+        {/* Work Portfolio Banner Section */}
+      <section className="relative bg-gradient-to-br from-cyan-400 via-white to-sky-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
+        <Container className="px-2 sm:px-4 lg:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <SectionTitle
+              title="Our Work Portfolio"
+            >
+              <span>Coming Soon</span>
+            </SectionTitle>
+          </div>
+        </Container>
+      </section>
       <ContactSection/>
 
     </Container>

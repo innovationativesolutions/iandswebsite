@@ -53,7 +53,7 @@ export function PopupWidget() {
       });
   };
 
-  return (
+   (
     <div>
       <Disclosure>
         {({ open }) => (

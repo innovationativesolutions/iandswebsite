@@ -87,6 +87,18 @@ const servicesInfo = {
     "Portfolio & Program Management",
     "Change & Risk Management"
   ],
+  "Engineering Services": [
+    "Civil Engineering – Site development, grading, drainage, and utility planning for efficient infrastructure.",
+    "Structural Engineering – Safe and resilient structural designs with seismic and load analysis.",
+    "Mechanical Engineering – HVAC, fire protection, and thermal systems engineered for performance and safety.",
+    "Piping Engineering – Process and utility piping design with stress analysis and 3D modeling for clash-free layouts.",
+    "Rotating & Static Equipment – Equipment selection, integration, and installation planning for optimized operations.",
+    "Electrical Engineering – Power distribution, lighting, grounding, and arc flash studies for reliable energy systems.",
+    "Instrumentation & Control – Automation and control systems with loop diagrams and safety integrity analysis.",
+    "Front-End Engineering – Feasibility studies and concept selection for business case and capital project justification.",
+    "Project Management – KPI-driven planning and execution with stakeholder engagement and performance tracking.",
+    "Constructability & Turnarounds – Safe, efficient field installations and outage support through expert planning."
+  ],
   "Construction Management": [
     "Estimation & Bidding – Sage, WinEst, Trimble",
     "Scheduling & Planning – P6, Synchro 4D",
@@ -130,6 +142,10 @@ const about = {
     {
       title: "Honesty, Empathy, Accountability",
       icon: <ShieldCheckIcon />,
+    },
+    {
+      title: "Engineering Excellence",
+      icon: <AdjustmentsHorizontalIcon />,
     },
   ],
 };
