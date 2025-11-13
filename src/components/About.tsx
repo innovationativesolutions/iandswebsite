@@ -23,10 +23,10 @@ export function AboutSection() {
               <span className="font-bold">Our mission is to design </span> and deliver innovative software solutions that empower businesses to thrive.
             </p>
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              Our company is committed to building products that are accessible, reliable, and designed to target clients' custom KPIs to help identify improvement enablers and measurable outcomes.
+              Our company is committed to building products that are accessible, reliable, and designed to target clients&apos; custom KPIs to help identify improvement enablers and measurable outcomes[...]
             </p>
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              As a women-owned company, we are dedicated to fostering diversity and inclusion — proving that diverse teams drive superior technology and progress, pushing the industry toward a more equitable future.
+              As a women-owned company, we are dedicated to fostering diversity and inclusion — proving that diverse teams drive superior technology and progress, pushing the industry toward a m[...]
             </p>
             <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               We are built on honesty and empathy and firmly believe that honoring commitments and admitting mistakes are essential for maintaining credibility and respect.
@@ -69,16 +69,16 @@ export function AboutSection() {
                 <div className="prose prose-gray dark:prose-invert max-w-none text-base sm:text-lg leading-relaxed space-y-6">
                   <p>
                     As a first-time woman entrepreneur, <span className="font-medium">Megha Davè</span> brings innovation, resilience,
-                    and a fresh perspective to address businesses' daily challenges and operational roadblocks with tailor-made solutions. With a passion for turning ideas into impactful digital products, she founded Innovations and Solutions to serve businesses seeking custom-built websites, software, and applications.
+                    and a fresh perspective to address businesses&apos; daily challenges and operational roadblocks with tailor-made solutions. With a passion for turning ideas into impactful digital p[...]
                   </p>
                   <p>
                     Entering a competitive tech landscape, she champions diversity and inclusion and believes that powerful technologies and impactful solutions begin with listening and empathy.
                   </p>
                   <p>
-                    Megha is passionate about building unique and sustainable tools tailored to clients' business cases and ensuring objectives are met with precision. She leads a team that transforms business ideas into scalable software while maintaining budget and schedule commitments.
+                    Megha is passionate about building unique and sustainable tools tailored to clients&apos; business cases and ensuring objectives are met with precision. She leads a team that transf[...]
                   </p>
                   <p>
-                    She believes in transparency and genuine partnership, is prepared to pivot strategies when needed, and is not afraid to challenge the status quo to find innovative solutions for clients.
+                    She believes in transparency and genuine partnership, is prepared to pivot strategies when needed, and is not afraid to challenge the status quo to find innovative solutions fo[...]
                   </p>
                   <p>
                     Megha Davè is committed to creating meaningful and economical digital solutions for clients by building transparent relationships, not just transactional engagements.
@@ -96,7 +96,7 @@ export function AboutSection() {
             return (
               <div
                 key={i}
-                className="group rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                className="group rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translat[...]"
               >
                 <div className="flex items-start sm:items-center gap-3 mb-2 sm:mb-3">
                   <Icon className="h-7 w-7 sm:h-8 sm:w-8 text-primary-600 dark:text-primary-400 flex-shrink-0 mt-0.5 sm:mt-0" />
